@@ -22,6 +22,7 @@
 #include "../commands/tui.h"
 #include "../commands/radifetch.h"
 #include "../commands/cowsay.h"
+#include "../commands/bootsplash.h"
 #include "../commands/gogetter.h"
 #include "../commands/cd.h"
 #include "../commands/text.h"
@@ -871,6 +872,7 @@ void registerCommands(void)
     register_command("rm",        "Remove file",                    rm_command);
     register_command("cowsay",    "Cowsay",                         cowsay_command);
     register_command("boot",      "Show welcome screen",            boot);
+    register_command("splash",    "Show boot logo splash screen",   bootsplash_command);
     register_command("echo",      "Echo message",                   echo_command);
     register_command("clear",     "Clear terminal",                 clear);
     register_command("hexdump",   "Hexdump toolkit",                geiger_command);

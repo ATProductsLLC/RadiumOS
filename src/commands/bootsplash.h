@@ -14,14 +14,10 @@
  * @brief Draw the full boot splash screen.
  *
  * Clears the terminal, then draws the centered logo/wordmark and the
- * bottom-left copyright line. Does not wait for input or delay on its
- * own — call boot_splash_hold() afterwards if a pause is wanted.
+ * bottom-left copyright line, repainting for a fixed hold duration.
+ * Called once at boot, from kernel_main() — not exposed as a shell
+ * command.
  */
 void show_boot_splash(void);
-
-/**
- * @brief Command handler so the splash can be re-shown from the shell.
- */
-void bootsplash_command(int argc, char *argv[]);
 
 #endif // BOOTSPLASH_H

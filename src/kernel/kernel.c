@@ -1,4 +1,3 @@
-
 #include "registerCommands.h"
 #include "createFiles.h"
 #include "../vga/vga.h"
@@ -25,6 +24,7 @@
 #include "../cpu/cpu.h"
 #include "../keyboard/keyboard.h"
 #include "../commands/cowsay.h"
+#include "../commands/bootsplash.h"
 #include "../rshplugin/rshplugin.h"
 #include "../http/http.h"
 
@@ -483,6 +483,7 @@ void set_flashy_net_info(void) {
 void kernel_main(void) {
 
     terminal_initialize();
+    show_boot_splash();
     history_init();
     avfs_init();
     script_init();
